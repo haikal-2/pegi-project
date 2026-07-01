@@ -1,0 +1,107 @@
+/* src/index.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #ffffff;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    font-family: inherit;
+}
+
+.stat-card, 
+.stat-card-white,
+.summary-card, 
+.tips-card,
+.filter-card,
+.widget-card, 
+.admin-card, 
+.promo-card,
+.kpi-card,
+.analytic-box,
+.table-card-container,
+.table-container-card,
+.preview-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  border: 1px solid #edf2f7; 
+}
+
+.stat-card:hover, 
+.stat-card-white:hover, 
+.summary-card:hover, 
+.tips-card:hover,
+.filter-card:hover,
+.widget-card:hover, 
+.admin-card:hover, 
+.promo-card:hover,
+.kpi-card:hover,
+.analytic-box:hover,
+.table-card-container:hover,
+.table-container-card:hover,
+.preview-card:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 15px 35px rgba(67, 24, 255, 0.08) !important;
+  border-color: #c7d2fe !important;
+}
+
+.data-table tbody tr,
+.dest-table tbody tr,
+.hotel-table tbody tr,
+.user-table tbody tr,
+.admin-table tbody tr {
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.data-table tbody tr:hover,
+.dest-table tbody tr:hover,
+.hotel-table tbody tr:hover,
+.user-table tbody tr:hover,
+.admin-table tbody tr:hover {
+  background-color: #f8fafc !important;
+  box-shadow: inset 4px 0 0 0 #4318ff !important; 
+}
+
+.activity-item, 
+.new-user-item, 
+.popular-item,
+.ranking-item,
+.crowd-item {
+  transition: all 0.2s ease !important;
+  border-radius: 12px !important;
+  border: 1px solid transparent !important; 
+}
+
+.activity-item:hover, 
+.new-user-item:hover, 
+.popular-item:hover,
+.ranking-item:hover,
+.crowd-item:hover {
+  background-color: #f8fafc !important;
+  transform: translateX(8px) !important; 
+  border-color: #edf2f7 !important;
+}
+
+button {
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+button:active {
+  transform: scale(0.93) !important; 
+}

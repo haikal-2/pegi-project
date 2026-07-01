@@ -1,0 +1,331 @@
+/* ================= PAGE LAYOUT ================= */
+.payment-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px 80px;
+    display: grid;
+    /* minmax(0, 1fr) KUNCI UTAMA biar form nggak meluber/kegencet */
+    grid-template-columns: minmax(0, 1fr) 380px; 
+    align-items: flex-start;
+    gap: 32px;
+    box-sizing: border-box;
+}
+
+.payment-left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    min-width: 0; /* Wajib di CSS Grid biar anak-anaknya gak maksa lebar */
+}
+
+.payment-right {
+    position: sticky;
+    top: 100px; 
+    width: 100%;
+}
+
+/* ================= CARD STYLE (ANTI BOCOR) ================= */
+.payment-card {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.05) !important;
+    padding: 32px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    /* Reset layout biar ga terpengaruh absolute dari luar */
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    height: auto !important;
+}
+
+.card-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+    border-bottom: 2px solid #f8f5ff !important;
+    padding-bottom: 16px !important;
+    position: relative !important; /* Mencegah judul melayang nutupin form */
+}
+
+.card-title h3 {
+    margin: 0 !important;
+    font-size: 1.25rem !important;
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+/* ================= INPUT & FORM ================= */
+.form-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+}
+
+.form-group label {
+    font-size: 0.85rem !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+}
+
+.form-control {
+    width: 100% !important;
+    height: 48px !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+    padding: 0 16px !important;
+    font-size: 0.95rem !important;
+    color: #0f172a !important;
+    background: #ffffff !important;
+    transition: all 0.2s ease !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+}
+
+.form-control:focus {
+    border-color: #7b3fe4 !important;
+    box-shadow: 0 0 0 3px rgba(123, 63, 228, 0.15) !important;
+}
+
+.form-control:disabled {
+    background: #f1f5f9 !important;
+    color: #94a3b8 !important;
+    cursor: not-allowed !important;
+    border-color: #e2e8f0 !important;
+}
+
+/* ================= TRAVELER CARD ================= */
+.traveler-card {
+    margin-bottom: 24px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+.traveler-card:last-child {
+    margin-bottom: 0;
+}
+
+.traveler-card h4 {
+    margin: 0 0 20px !important;
+    font-size: 1.05rem !important;
+    color: #0f172a !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 16px !important;
+}
+
+.seat-number {
+    background: #f3e8ff !important;
+    color: #7b3fe4 !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important; /* Mencegah tulisan Kursi turun baris */
+}
+
+/* ================= FIX RADIO BUTTON MENGKERUT ================= */
+.profile-toggle {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 24px !important;
+    margin-bottom: 20px !important;
+    align-items: center !important;
+    flex-wrap: wrap !important; 
+    width: 100% !important;
+}
+
+.profile-toggle label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    font-size: 0.9rem !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important; /* KUNCI: Paksa teks sebaris, gak numpuk ke bawah */
+    flex-shrink: 0 !important; /* Cegah elemen kegencet */
+}
+
+.profile-toggle input[type="radio"] {
+    accent-color: #7b3fe4 !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+}
+
+/* ================= CONTACT & TRAVELER GRID ================= */
+.contact-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 20px !important;
+    width: 100% !important;
+}
+
+/* ================= PAYMENT METHOD ================= */
+.payment-method-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.payment-method:hover {
+    border-color: #cbd5e1;
+    background: #f8fafc;
+}
+
+.payment-method.active {
+    border-color: #7b3fe4;
+    background: #f8f5ff;
+}
+
+.payment-method input {
+    accent-color: #7b3fe4;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+.payment-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.payment-method.active .payment-icon {
+    background: white;
+}
+
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.payment-info strong {
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+.payment-info span {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* ================= PAYMENT SUMMARY CARD ================= */
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    width: 100%;
+    gap: 16px;
+}
+
+.summary-item span {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    flex: 1;
+}
+
+.summary-item strong {
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: right;
+    flex: 1.2;
+}
+
+.summary-item.total {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-top: 1px dashed #cbd5e1;
+    padding-top: 24px;
+    align-items: center;
+}
+
+.summary-item.total span {
+    color: #0f172a;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.summary-item.total strong {
+    color: #7b3fe4;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+/* ================= PRIMARY BUTTON ================= */
+.primary-btn {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 12px;
+    background: #7b3fe4;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(123, 63, 228, 0.25);
+}
+
+.primary-btn:hover:not(:disabled) {
+    background: #622db8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(123, 63, 228, 0.35);
+}
+
+.primary-btn:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #f1f5f9;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 1024px) {
+    .payment-page {
+        grid-template-columns: 1fr;
+        padding: 0 20px 60px;
+    }
+    
+    .payment-right {
+        position: static;
+        order: -1; 
+    }
+}
+
+@media(max-width: 576px) {
+    .contact-grid {
+        grid-template-columns: 1fr !important; /* Form input turun ke bawah di HP */
+    }
+}

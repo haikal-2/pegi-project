@@ -1,0 +1,576 @@
+/* 1. Pembungkus Utama (Layar Penuh) */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  overflow: hidden; 
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.profile-layout, .traveler-layout {
+  display: flex;
+  flex: 1; 
+  overflow: hidden; 
+  font-family: "Inter", sans-serif;
+}
+
+/* Main Content */
+.traveler-main {
+  flex: 1;
+  padding: 30px; /* Lebih rapet biar ga kebesaran */
+  background-color: #f4f7fe;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  color: #2b3674;
+  font-size: 24px; /* Diperkecil */
+  margin: 0 0 5px 0;
+}
+.page-header p {
+  color: #8f9bba;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Tombol Utama Diperbagus */
+.btn-create-group {
+  background: linear-gradient(135deg, #6366f1, #4318ff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(67, 24, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-create-group:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(67, 24, 255, 0.3);
+  background: linear-gradient(135deg, #5052de, #3412cb);
+}
+
+/* Highlights Grid */
+.highlight-grid {
+  display: flex;
+  gap: 15px; /* Skala diperkecil */
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.highlight-card {
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.bromo-card {
+  flex: 2 1 350px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bromo-info h2 {
+  margin: 8px 0;
+  color: #2b3674;
+  font-size: 20px;
+}
+.bromo-info p {
+  color: #8f9bba;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+.text-purple {
+  color: #4318ff;
+}
+
+.status-badge-orange {
+  background-color: #fff2e5;
+  color: #e58e00;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.bromo-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.bromo-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-group img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -10px;
+}
+.avatar-group img:first-child {
+  margin-left: 0;
+}
+
+.avatar-more {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #4318ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  margin-left: -10px;
+  border: 2px solid white;
+}
+
+.bromo-location {
+  display: flex;
+  flex-direction: column;
+}
+.meta-label {
+  font-size: 11px;
+  color: #8f9bba;
+}
+.meta-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b3674;
+}
+
+/* Loyalty Card */
+.loyalty-card {
+  flex: 1 1 200px;
+  background: linear-gradient(135deg, #4318ff, #7852ff);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loyalty-icon {
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.loyalty-card h3 {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+}
+.loyalty-card p {
+  margin: 0 0 15px 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+.points-display {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.points-display h1 {
+  margin: 0;
+  font-size: 26px;
+}
+.points-display span {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 220px;
+  gap: 8px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+.search-bar:focus-within {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+}
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-select-grup {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Grid & Cards */
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.group-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.group-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card-img-wrapper {
+  position: relative;
+  height: 140px;
+}
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+}
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.card-title-row h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.card-meta-list p {
+  margin: 6px 0;
+  font-size: 12px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tombol Detail Diperbagus */
+.btn-detail-grup {
+  width: 100%;
+  background-color: #f4f7fe;
+  color: #4318ff;
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-detail-grup:hover {
+  background-color: #4318ff;
+  color: white;
+}
+
+/* Create New Card */
+.create-new-card {
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+  background-color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.create-new-card:hover {
+  background-color: #e2e8f0;
+  border-color: #94a3b8;
+}
+.create-icon {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #94a3b8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+.create-new-card h3 {
+  color: #334155;
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+.create-new-card p {
+  color: #64748b;
+  font-size: 12px;
+  margin: 0 0 15px 0;
+}
+.btn-text-purple {
+  background: none;
+  border: none;
+  color: #4318ff;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.empty-message {
+  padding: 20px;
+  color: #8F9BBA;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+/* ==========================================================================
+   MODAL TAMBAH GRUP (SCROLLBAR HIDDEN & DESAIN DIPERBAIKI)
+   ========================================================================== */
+.modal-overlay-grup {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content-grup {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 450px;
+  max-height: 85vh;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  
+  /* 💡 Trik Sembunyiin Scrollbar tapi tetep bisa scroll */
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.modal-content-grup::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.modal-content-grup h2 {
+  color: #1e293b;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.form-group-grup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group-grup label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.form-group-grup input,
+.form-group-grup select {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s;
+}
+.form-group-grup input:focus,
+.form-group-grup select:focus {
+  border-color: #6366f1;
+}
+
+.form-group-row-grup {
+  display: flex;
+  gap: 12px;
+}
+.form-group-row-grup .form-group-grup {
+  flex: 1;
+}
+
+/* 💡 DESAIN INPUT FILE CUSTOM */
+.file-upload-wrapper input[type="file"] {
+  display: none; /* Input asli disembunyikan */
+}
+.custom-file-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px dashed #cbd5e1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.custom-file-btn:hover {
+  background-color: #e2e8f0;
+  border-color: #94a3b8;
+  color: #334155;
+}
+
+.preview-image-container {
+  margin-top: 10px;
+  position: relative;
+  height: 120px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+.preview-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Aksi Modal */
+.modal-actions-grup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn-cancel-grup {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.btn-cancel-grup:hover {
+  color: #334155;
+}
+
+.btn-save-grup {
+  background: linear-gradient(135deg, #6366f1, #4318ff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(67, 24, 255, 0.2);
+  transition: 0.3s;
+}
+.btn-save-grup:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(67, 24, 255, 0.3);
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+  .traveler-layout { flex-direction: column; }
+  .traveler-main { padding: 20px 15px; width: 100%; }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .page-header h1 { font-size: 20px; }
+  .btn-create-group { width: 100%; justify-content: center; }
+
+  .bromo-card { flex-direction: column-reverse; text-align: center; gap: 15px; }
+  .bromo-info { align-items: center; }
+  .bromo-meta { flex-direction: column; gap: 10px; }
+  .bromo-img { width: 100%; height: auto; aspect-ratio: 16/9; }
+
+  .toolbar-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .groups-grid { grid-template-columns: 1fr; }
+}

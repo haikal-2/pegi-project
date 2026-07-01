@@ -1,0 +1,38 @@
+{
+  "name": "Pegi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#7C3AED",
+  "theme_color": "#7C3AED",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Logo_Pegi_72x72.jpeg",
+      "type": "image/jpeg",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/Logo_Pegi_192x192.jpeg",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/Logo_Pegi_512x512.jpeg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/Pegi-Screenshot-pc.png",
+      "sizes": "1167x772",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/Pegi-Screenshot-mobile.png",
+      "sizes": "459x769",
+      "type": "image/png"
+    }
+  ]
+}

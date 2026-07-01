@@ -1,0 +1,297 @@
+/* Layout & Spacing */
+.user-management-content {
+  padding: 24px 32px;
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.page-header-flex h1 { 
+  color: #1a202c; 
+  font-size: 1.4rem; 
+  margin: 0 0 4px 0; 
+  font-weight: 700; 
+}
+.page-header-flex p { 
+  color: #718096; 
+  font-size: 0.85rem; 
+  margin: 0; 
+}
+
+/* Alert Error Style */
+.alert-error {
+  background-color: #fff5f5;
+  color: #c53030;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  border: 1px solid #feb2b2;
+}
+
+/* Statistik Grid (Ramping) */
+.stats-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card-white {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  border: 1px solid #edf2f7;
+}
+
+.stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.stat-card-header p {
+  color: #718096;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0;
+}
+.icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.stat-card-white h2 { 
+  color: #2d3748; 
+  font-size: 1.4rem; 
+  font-weight: 700; 
+  margin: 0; 
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #edf2f7;
+}
+.filter-left { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+}
+.filter-select {
+  padding: 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #2d3748;
+  font-size: 0.85rem;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  background-color: #f7fafc;
+}
+.btn-reset-filter {
+  background: none; 
+  border: none; 
+  color: #4318FF; 
+  font-weight: 600;
+  cursor: pointer; 
+  font-size: 0.85rem;
+}
+.btn-reset-filter:hover { text-decoration: underline; }
+
+/* Table Container Card */
+.table-container-card {
+  background: white;
+  border-radius: 12px;
+  padding: 8px 0 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  border: 1px solid #edf2f7;
+}
+
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.user-table th {
+  padding: 12px 20px;
+  color: #a0aec0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #edf2f7;
+}
+.user-table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f7fafc;
+  vertical-align: middle;
+  font-size: 0.85rem;
+}
+.user-table tbody tr:hover td {
+  background-color: #fafbfe;
+}
+
+/* User Cell */
+.user-cell { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+}
+.user-avatar, .user-initials { 
+  width: 36px; 
+  height: 36px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+}
+.user-initials { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-weight: 700; 
+  font-size: 0.85rem; 
+}
+.user-name-group { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 2px; 
+}
+.user-id { 
+  font-size: 0.7rem; 
+  color: #a0aec0; 
+}
+
+/* Badges & Status */
+.role-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.role-normal { background-color: #e9e3ff; color: #4318FF; }
+.role-admin { background-color: #fff9e3; color: #d69e2e; }
+
+.status-cell { 
+  display: flex; 
+  align-items: center; 
+  gap: 6px; 
+  font-weight: 500; 
+}
+.status-dot { 
+  width: 6px; 
+  height: 6px; 
+  border-radius: 50%; 
+}
+.dot-green { background-color: #38a169; }
+.dot-red { background-color: #e53e3e; }
+
+/* Group Tombol Aksi */
+.action-buttons-group {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-danger { background: #fff5f5; color: #e53e3e; }
+.btn-danger:hover { background: #e53e3e; color: white; }
+.btn-success { background: #f0fff4; color: #38a169; }
+.btn-success:hover { background: #38a169; color: white; }
+.btn-primary-action { background: #e9e3ff; color: #4318FF; }
+.btn-primary-action:hover { background: #4318FF; color: white; }
+
+/* Table States (Loading & Empty) */
+.table-loading {
+  text-align: center;
+  padding: 40px !important;
+  color: #718096;
+}
+.table-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #e2e8f0;
+  border-top: 2px solid #4318FF;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  animation: spin-loader 0.8s linear infinite;
+}
+@keyframes spin-loader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.empty-state-table {
+  text-align: center;
+  padding: 32px !important;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+/* Pagination */
+.pagination-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px 0 20px;
+  font-size: 0.8rem;
+}
+.pagination-controls { 
+  display: flex; 
+  align-items: center; 
+  gap: 4px; 
+}
+.page-btn {
+  padding: 4px 10px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: 0.2s;
+}
+.page-btn:hover:not(:disabled) { background-color: #f4f7fe; border-color: #cbd5e0; }
+.page-btn.active { background-color: #4318FF; color: white; border-color: #4318FF; }
+.page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .user-management-content { padding: 16px 20px; }
+  .filter-bar { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .btn-reset-filter { align-self: flex-end; }
+}
+
+@media (max-width: 768px) {
+  .action-buttons-group { justify-content: flex-start; }
+  .pagination-footer { flex-direction: column; gap: 12px; }
+}

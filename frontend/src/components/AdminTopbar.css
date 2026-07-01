@@ -1,0 +1,131 @@
+.admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e5f2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 20px;
+}
+
+.topbar-left-spacer {
+  flex: 1;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f4f7fe; 
+  border-radius: 40px;
+  padding: 12px 20px;
+  gap: 12px;
+  
+  flex: 1; 
+  max-width: 800px; 
+  min-width: 250px; 
+  margin-right: auto;
+}
+
+.search-icon {
+  color: #2b3674;
+  font-size: 1.1rem;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent; 
+  width: 100%; 
+  color: #2b3674;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.search-bar input::placeholder {
+  color: #8f9bba;
+}
+.search-bar input::placeholder {
+  color: #8f9bba;
+}
+
+/* Bagian Ikon & Aksi */
+.topbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #8f9bba;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ef4444; /* Merah */
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.icon-btn:hover {
+  color: #4318FF;
+}
+
+.topbar-divider {
+  width: 1px;
+  height: 35px;
+  background-color: #e0e5f2;
+  margin: 0 24px;
+}
+
+/* Profil Info */
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.admin-name {
+  font-weight: 700;
+  color: #2b3674;
+  font-size: 0.95rem;
+}
+
+.admin-role {
+  font-size: 0.65rem;
+  color: #8f9bba;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.admin-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
