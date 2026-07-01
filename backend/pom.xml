@@ -113,6 +113,13 @@
             <version>3.5.3</version>
         </dependency>
 
+        <!-- AWS SDK v2 - S3 (Railway bucket storage) -->
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>s3</artifactId>
+            <version>2.25.60</version>
+        </dependency>
+
     </dependencies>
 
     <build>
